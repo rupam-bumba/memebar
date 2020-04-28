@@ -2,6 +2,11 @@
 const express = require("express");
 const app = express();
 
+// CORS server configuration
+var cors = require('cors');
+app.use(cors());
+
+
 //morgan Devolepment
 const morgan = require("morgan");
 app.use(morgan("dev"));
@@ -12,6 +17,8 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 
+// dotenv 
+require('dotenv').config()
 
 
 
@@ -53,9 +60,14 @@ mongoose.connect(
 // |  _  /  | |  | | | |  | | | | |_ | |  __  |    | |     \___ \ 
 // | | \ \  | |__| | | |__| | | |__| | | |  | |    | |     ____) |
 // |_|  \_\  \____/   \____/   \_____| |_|  |_|    |_|    |_____/ 
-                                                             
+     
+
 //user
-app.use("/user", require("./api/rought/user"));
+app.use("/api/user", require("./api/rought/user"));
+//more
+app.use("/api/more", require("./api/rought/more"));
+//profile
+app.use("/api/profile", require("./api/rought/profile") );
 //
 //
 //
@@ -64,9 +76,7 @@ app.use("/user", require("./api/rought/user"));
 //
 //
 //
-//
-//
-//
+
 
 
 

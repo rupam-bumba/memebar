@@ -1,8 +1,9 @@
 
+
 // user gate main 
 exports.get_main = (req, res) => {
-  // console.log(" | Debug | "+ "/user -- rought ");
+  console.log(" | Debug | " + "/profile -- rought ");
   res.status(200).json({
-    rought: "user"
+    rought: "pofile"
   });
 };

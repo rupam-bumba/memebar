@@ -14,12 +14,12 @@ exports.post_login = (req, res) => {
         if (user.length < 1) {
           return res.status(404).json({
             massage: "mail not found"
-          });
+          }); 
         }
         bcrypt.compare(req.body.password, user[0].password, (err, result) => {
           if (err) {
             return res.status(401).json({
-              massage: "fail",
+              massage: "fail : incorrect password ",
               error: err
             });
           }
@@ -29,7 +29,7 @@ exports.post_login = (req, res) => {
                 email: user[0].password,
                 userID: user[0]._id
               },
-              "precess.env.jwtkey",
+              process.env.jwtkey,//DOTENV FILE
               {
                 expiresIn: "1h"
               }
@@ -37,7 +37,8 @@ exports.post_login = (req, res) => {
   
             return res.status(201).json({
               massage: "success ",
-              token: jwtToken
+              token: jwtToken,
+              userID : user[0]._id
             });
           } else {
             return res.status(201).json({

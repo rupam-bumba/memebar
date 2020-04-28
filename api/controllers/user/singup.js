@@ -1,4 +1,3 @@
-
 const bcrypt = require("bcrypt");
 const userDB = require('../../models/user' );
 
@@ -15,8 +14,8 @@ exports.post_singup = (req, res) => {
         if (result >= 1) {
           console.log(result);
   
-          res.status(200).json({
-            massage: "email exit"
+          res.status(400).json({
+            massage: "email exit "
           });
         } else {
           /// hassing password
@@ -44,7 +43,7 @@ exports.post_singup = (req, res) => {
                   console.log("ERROE....");
                   res.status(400).json({
                     massage:
-                      'database error cheack "user.save()" methord in user rought',
+                      'database error cheack ../conroller/user methord in user rought || user email alradey exits',
                     erroe: err
                   });
                 });

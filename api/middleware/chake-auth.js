@@ -2,13 +2,22 @@ const jwt = require('jsonwebtoken')
 
 module.exports = (req,res,next)=>{
     try{
-        const decode =jwt.verify(req.body.token, 'precess.env.jwtkey');
-        req.userData = decode;////////////////////////////////////////
+        const token = req.headers.authorization.split(" ")[1];
+
+        console.log("|7 Debug | token >> " + token );
+        console.log("|8 Debug | precess.env.jwtkey >> " +  process.env.jwtkey);
+        
+        const decode =jwt.verify(token,  process.env.jwtkey);
+        req.userData = decode;
+
+        console.log('|13 Debug | decode >> ' + decode);
+        console.log('|14 Debug | JTW Authintication Successfull >>');
         next();
 
     }catch(error){
+        // console.log("| Debug | JWT >> Authintication Faill " );
         return res.status(400).json({
-            massage: 'authintication faill '
+            Massage: 'JWT Authintication Faill'
         })
     }
-}
+} 

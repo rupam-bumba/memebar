@@ -1,0 +1,18 @@
+[
+    {
+        "type": "Directory",
+        "name": "/home/rupambumba/Documents/memebar/api",
+        "parent_id": null,
+        "workspaceRoot": "/home/rupambumba/Documents/memebar",
+        "workspacePath": "api",
+        "id": "Xdh4gFW3ePaAIkjZ"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/rupambumba/Documents/memebar/client/src",
+        "parent_id": null,
+        "workspaceRoot": "/home/rupambumba/Documents/memebar",
+        "workspacePath": "client/src",
+        "id": "3aF9DA5SEL4obnk6"
+    }
+]
