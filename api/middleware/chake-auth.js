@@ -5,7 +5,7 @@ module.exports = (req,res,next)=>{
         const token = req.headers.authorization.split(" ")[1];
 
         console.log("|7 Debug | token >> " + token );
-        console.log("|8 Debug | precess.env.jwtkey >> " +  process.env.jwtkey);
+        // console.log("|8 Debug | precess.env.jwtkey >> " +  process.env.jwtkey);
         
         const decode =jwt.verify(token,  process.env.jwtkey);
         req.userData = decode;
@@ -15,7 +15,7 @@ module.exports = (req,res,next)=>{
         next();
 
     }catch(error){
-        // console.log("| Debug | JWT >> Authintication Faill " );
+        console.log("| Debug | JWT >> Authintication Faill " );
         return res.status(400).json({
             Massage: 'JWT Authintication Faill'
         })

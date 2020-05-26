@@ -11,7 +11,10 @@ router.get("/" , mainController.get_main); // profile/main rought
 
 
 const faceController  = require("../controllers/profile/face")
-router.get("/face", chakeAuth , faceController.get_face) //profile face rought 
+router.post("/face", chakeAuth , faceController.post_face) //profile face rought 
+
+const editController  = require("../controllers/profile/edit")
+router.put("/edit" , editController.put_edit) //profile face rought 
 
 // exporting rought funtion to middleware
 module.exports = router;

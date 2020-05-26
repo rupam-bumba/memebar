@@ -12,10 +12,9 @@ const user = mongoos.Schema({
     type: String,
     required: true,
   },
-  password: {
-    // required
+  username: {
     type: String,
-    required: true,
+    unique: true,
   },
   email: {
     // required
@@ -23,10 +22,22 @@ const user = mongoos.Schema({
     required: true,
     unique: true,
   },
-
-  username: {
+  phonenumber: {
     type: String,
-    unique: true,
+  },
+  password: {
+    // required
+    type: String,
+    required: true,
+  },
+  bio: {
+    type: String,
+  },
+  interest: {
+    type: String,
+  },
+  website: {
+    type: String,
   },
   dateofbirth: {
     type: String,
@@ -34,7 +45,15 @@ const user = mongoos.Schema({
   gender: {
     type: String,
   },
-  bio: {
+
+  
+  subscribers: {
+    type: String,
+  },
+  subscribe: {
+    type: String,
+  },
+  friends: {
     type: String,
   },
 });
