@@ -14,5 +14,21 @@
         "workspaceRoot": "/home/rupambumba/Documents/memebar",
         "workspacePath": "client/src",
         "id": "3aF9DA5SEL4obnk6"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/rupambumba/Documents/memebar/public",
+        "parent_id": null,
+        "workspaceRoot": "/home/rupambumba/Documents/memebar",
+        "workspacePath": "public",
+        "id": "6319RtBjzXeLbGJO"
+    },
+    {
+        "type": "File",
+        "name": "/home/rupambumba/Documents/memebar/app.js",
+        "parent_id": null,
+        "workspaceRoot": "/home/rupambumba/Documents/memebar",
+        "workspacePath": "app.js",
+        "id": "rjQNFnumaxOAdH60"
     }
 ]

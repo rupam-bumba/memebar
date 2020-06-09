@@ -4,6 +4,7 @@ const userDB = require('../../models/user' );
 
 exports.post_singup = (req, res) => {
     /// finding email
+    console.log("| 7 Debug JSON.stringify( req.body) |" + JSON.stringify( req.body) );
   
     userDB
       .find({

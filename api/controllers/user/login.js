@@ -34,11 +34,13 @@ exports.post_login = (req, res) => {
                 expiresIn: "1h"
               }
             );
-  
+            
+            let username = user[0].firstname +" "+user[0].lastname
             return res.status(201).json({
               massage: "success ",
               token: jwtToken,
-              userID : user[0]._id
+              userID : user[0]._id,
+              user_name: username
             });
           } else {
             return res.status(201).json({
