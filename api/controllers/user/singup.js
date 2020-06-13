@@ -29,11 +29,13 @@ exports.post_singup = (req, res) => {
             return res.status(500).json(err);
           } else {
             /// creating user
+            let user_name = req.body.firstname+req.body.lastname+"_"+Date.now()+"_"+Math.floor(Math.random() * 1000);
             console.log("| 29 Debug| creating user");
             const user = new userDB({
               _id: mongoose.Types.ObjectId(),
               firstname: req.body.firstname,
               lastname: req.body.lastname,
+              username: user_name,
               password: hass,
               email: req.body.email,
             });
