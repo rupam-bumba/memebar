@@ -3,7 +3,7 @@ const mongoos = require("mongoose");
 const user = mongoos.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   firstname: {
-    // required
+    // required 
     type: String,
     required: true,
   },
@@ -17,7 +17,7 @@ const user = mongoos.Schema({
     unique: true,
   },
   email: {
-    // required
+    // required 
     type: String,
     required: true,
     unique: true,
