@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "_id": "5ea3c21e8e34551e897ac27a",
+      "firstname": "w",
+      "lastname": "w",
+      "password": "$2b$10$DorHX5c9wNhumxvpfdCF0O96z0OsW6XPJuGK/lALMdiKP5MuP48gW",
+      "email": "w@w.w",
+      "__v": 0
+    }
+  ],
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "content-length": "165",
+    "content-type": "application/json; charset=utf-8"
+  },
+  "config": {
+    "url": "api/profile/face",
+    "method": "post",
+    "data": "{\"_id\":\"5ea3c21e8e34551e897ac27a\"}",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json;charset=utf-8",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiQyYiQxMCREb3JIWDVjOXdOaHVteHZwZmRDRjBPOTZ6ME9zVzZYUEp1R0svbEFMTWRpS1A1TXVQNDhnVyIsInVzZXJJRCI6IjVlYTNjMjFlOGUzNDU1MWU4OTdhYzI3YSIsImlhdCI6MTU4ODA5NzAwNSwiZXhwIjoxNTg4MTAwNjA1fQ.3xIePsKXn8n2kkBx6zBfFE0yOht1poeZMIjvYVSp3M0"
+    },
+    "baseURL": "http://localhost:5000",
+    "transformRequest": [null],
+    "transformResponse": [null],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1
+  },
+  "request": {}
+}
